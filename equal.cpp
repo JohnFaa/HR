@@ -55,37 +55,6 @@ int findSteps(int * dist, int n, int d){
         steps += d;
     }
     return steps;
-    /*
-    //calculating the sum of difference between every number and the least number
-    int diff = findDiff(distCopy, n, minNumPos);
-    while(diff != 0){
-        for(int i = 0; i < n; i++){
-            if(i == minNumPos || distCopy[i] == distCopy[minNumPos])
-                continue;
-            int minC = 0;
-            int minDiff = diff;
-            //calculate the best reduction for every one
-            for(int j = 0; j < 3; j++){
-                if(distCopy[i] - C[j] < distCopy[minNumPos])
-                    continue;
-                int newDiff = diff - abs(distCopy[i] - distCopy[minNumPos]) +
-                    abs(distCopy[i] - C[j] - distCopy[minNumPos]);
-                if(newDiff < minDiff){
-                    minDiff = newDiff;
-                    minC = C[j];
-                }
-            }
-            diff = minDiff;
-            distCopy[i] -= minC;
-            //printArray(distCopy, n);
-            steps += 1;
-            if(diff == 0){
-                delete[] distCopy;
-                return steps;
-            }
-
-        }
-    }*/
 }
 
 int main(){
